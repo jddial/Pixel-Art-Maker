@@ -17,9 +17,9 @@ document.addEventListener('submit', function() {
 // Make table
 function makeGrid(height, width) {
     designCanvas.innerHTML = "";
-    for (var w = 1; w <= width; w++) {
+    for (var h = 1; h <= height; h++) {
         let row = document.createElement('tr');
-        for(var h = 1; h <= height; h++){
+        for(var w = 1; w <= width; w++){
             let col = document.createElement('td');
             row.appendChild(col);
             col.addEventListener('click', function(event) {

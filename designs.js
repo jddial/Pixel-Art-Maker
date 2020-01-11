@@ -12,4 +12,9 @@ function makeGrid() {
 
 // Your code goes here!
 
+for(var row = 0; row < numbers.length; row++){
+    for(var column = 0; column < numbers[row].length; column++){
+       
+}
+
 }

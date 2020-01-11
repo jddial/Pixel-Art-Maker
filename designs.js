@@ -23,7 +23,8 @@ document.addEventListener('submit', function() {
  * A grid should appear when
  * users submit width and height
  * users can color cells different
- * colors
+ * colors and clear cell by double 
+ * clicking
  */
 function makeGrid(height, width) {
     designCanvas.innerHTML = "";

@@ -16,12 +16,12 @@ document.addEventListener('submit', function() {
     makeGrid(height, width);
 });
 function makeGrid(height, width) {
-    for (w = 0; w <= width; ++w) {
+    for (w = 1; w <= width; ++w) {
         let row = document.createElement('tr');
-        for (h = 0; h <= height; ++h) {
+        for (h = 1; h <= height; ++h) {
             let cell = document.createElement('td');
             row.appendChild('cell');
-           cell.addEventListener('ondrag', function(events) {
+            cell.addEventListener('ondrag', function(events) {
               cell.style.backgroundColor = colorPicker.value;
             })
         };

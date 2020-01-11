@@ -1,20 +1,30 @@
-// Select color input
+/**
+ * Input variables for cell color,
+ * grid height, grid width, submit
+ * function and table
+ */
 var pickAColor = document.getElementById('colorPicker');
-
-// Select size input
 var gridHeight = document.getElementById('inputHeight');
 var gridWidth = document.getElementById('inputWidth');
 var gridSize = document.getElementById('sizePicker');
 var designCanvas = document.getElementById('pixelCanvas');
 
-// When size is submitted by the user, call makeGrid()
+/**
+ * Asks users to create a grid
+ */
 document.addEventListener('submit', function() {
     event.preventDefault();
     var width = gridWidth.value;
     var height = gridHeight.value;
     makeGrid(height, width);
 });
-// Make table
+
+/**
+ * A grid should appear when
+ * users submit width and height
+ * users can color cells different
+ * colors
+ */
 function makeGrid(height, width) {
     designCanvas.innerHTML = "";
     for (var h = 1; h <= height; h++) {

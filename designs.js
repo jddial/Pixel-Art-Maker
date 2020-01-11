@@ -32,8 +32,3 @@ function makeGrid(height, width) {
         designCanvas.appendChild(row);
     }
 }
-// Set color for selected cell
-selectedGrid.addEventListener('click', function() {
-    event.preventDefault();
-    console.log(selectedGrid.value);
-})

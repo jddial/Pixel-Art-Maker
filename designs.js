@@ -1,5 +1,5 @@
 // Select color input
-const color = document.getElementById('colorPicker');
+const pickAColor = document.getElementById('colorPicker');
 
 // Select size input
 const gridHeight = document.getElementById('inputHeight');
@@ -15,16 +15,17 @@ document.addEventListener('submit', function() {
     pixelCanvas.innerHTML = "";
     makeGrid(height, width);
 });
+
 function makeGrid(height, width) {
-    for (w = 1; w <= width; ++w) {
+    for (var w = 1; w <= width; w++) {
         let row = document.createElement('tr');
-        for (h = 1; h <= height; ++h) {
+        for (var h = 1; h <= height; h++) {
             let cell = document.createElement('td');
-            row.appendChild('cell');
-            cell.addEventListener('ondrag', function(events) {
-              cell.style.backgroundColor = colorPicker.value;
+            row.appendChild(cell);
+            cell.addEventListener('ondrag', function(events) {
+              cell.style.backgroundColor = color.value;
             })
         };
-        pixelCanvas.appendChild('row');
+        pixelCanvas.appendChild(row);
     };
 };
